@@ -7,7 +7,7 @@ Feature: Crear contacto
     * header Authorization = 'Bearer ' + token
     * header Content-Type = 'application/json'
     * header Accept = 'application/json'
-
+ 
   Scenario: Crear contacto exitosamente
     Given path '/contacts'
     And request
