@@ -1,4 +1,4 @@
-Feature: Login to Parabank
+Feature: Login to App contacts
 
   Background:
     * url baseUrl
