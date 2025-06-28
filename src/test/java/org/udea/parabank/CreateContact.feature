@@ -2,7 +2,7 @@ Feature: Crear contacto
 
   Background:
     * url baseUrl
-    * def login = call read('classpath:org/udea/parabank/login.feature')
+    * def login = callonce read('classpath:org/udea/parabank/login.feature@Successful Login with valid credentials')
     * def token = login.token
     * header Authorization = 'Bearer ' + token
     * header Content-Type = 'application/json'
@@ -28,3 +28,4 @@ Feature: Crear contacto
     """
     When method POST
     Then status 201
+  
