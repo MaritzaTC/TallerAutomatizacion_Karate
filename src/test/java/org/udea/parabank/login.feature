@@ -29,3 +29,9 @@ Feature: Login to Parabank
     }
     """
     * def token = response.token
+  Scenario: Login failed with invalid credentials
+    Given path '/users/login'
+    And request { "email": "marit@gmail.com", "password": "wrong" }
+    When method POST
+    Then status 401
+    And match response.message == "Incorrect email or password"
